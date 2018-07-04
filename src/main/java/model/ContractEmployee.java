@@ -1,11 +1,11 @@
 package model;
 
-public class ContractEmployee extends Employee{
+public class ContractEmployee extends Employee {
 
     private double contractCost;
 
     public double calculatePaycheck() {
-        return contractCost;
+        return contractCost * 0.85d;
     }
 
     public void editData() {

@@ -1,11 +1,11 @@
 package model;
 
-public class SalaryEmployee extends Employee{
+public class SalaryEmployee extends Employee {
 
     private double monthlySalary;
 
     public double calculatePaycheck() {
-        return monthlySalary;
+        return monthlySalary * 0.77d;
     }
 
     public void editData() {
