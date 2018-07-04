@@ -13,10 +13,6 @@ public abstract class Employee {
     public abstract double calculatePaycheck();
     public abstract void editData();
 
-    public Employee() {
-        uuid = UUID.randomUUID();
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -51,5 +47,9 @@ public abstract class Employee {
 
     public UUID getUuid() {
         return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
     }
 }
