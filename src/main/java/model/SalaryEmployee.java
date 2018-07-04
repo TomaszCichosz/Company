@@ -5,7 +5,7 @@ public class SalaryEmployee extends Employee{
     private double monthlySalary;
 
     public double calculatePaycheck() {
-        return 0;
+        return monthlySalary;
     }
 
     public void editData() {

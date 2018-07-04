@@ -1,12 +1,12 @@
 package model;
 
-public class HourlyEmployee extends Employee{
+public class HourlyEmployee extends Employee {
 
     private int hoursWorked;
     private double hourlyCost;
 
     public double calculatePaycheck() {
-        return 0;
+        return hoursWorked * hourlyCost;
     }
 
     public void editData() {

@@ -5,7 +5,7 @@ public class ContractEmployee extends Employee{
     private double contractCost;
 
     public double calculatePaycheck() {
-        return 0;
+        return contractCost;
     }
 
     public void editData() {
