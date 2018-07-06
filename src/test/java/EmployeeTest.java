@@ -39,7 +39,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void givenHourlyEmployee_whenCalculatePaycheckMethod_thenPaycheckValueCalculatedCorrectly() {
+    public void givenHourlyEmployee_whenCalculatePaycheck_thenPaycheckValueCalculatedCorrectly() {
         HourlyEmployee hourlyEmployee = new HourlyEmployee.Builder().hourlyCost(2d).hoursWorked(100).build();
 
         double paycheck = hourlyEmployee.calculatePaycheck();
@@ -48,7 +48,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void givenContractEmployee_whenCalculatePaycheckMethod_thenPaycheckValueCalculatedCorrectly() {
+    public void givenContractEmployee_whenCalculatePaycheck_thenPaycheckValueCalculatedCorrectly() {
         ContractEmployee contractEmployee = new ContractEmployee.Builder().contractCost(100).build();
 
         double paycheck = contractEmployee.calculatePaycheck();
@@ -57,7 +57,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void givenSalaryEmployee_whenCalculatePaycheckMethod_thenPaycheckValueCalculatedCorrectly() {
+    public void givenSalaryEmployee_whenCalculatePaycheck_thenPaycheckValueCalculatedCorrectly() {
         SalaryEmployee salaryEmployee = new SalaryEmployee.Builder().monthlySalary(1000).build();
 
         double paycheck = salaryEmployee.calculatePaycheck();
