@@ -19,7 +19,7 @@ public class HourlyEmployeeStrategy implements Strategy {
         System.out.println("Podaj hoursWorked:");
         int hoursWorked = scanner.nextInt();
         System.out.println("Podaj hourlyCost");
-        double hourlyCost = scanner.nextInt();
+        double hourlyCost = scanner.nextDouble();
 
         return new HourlyEmployee.Builder().uuid().name(name).surname(surname)
                 .id(id).hoursWorked(hoursWorked).hourlyCost(hourlyCost).build();

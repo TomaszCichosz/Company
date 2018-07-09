@@ -8,6 +8,8 @@ public class Menu {
         final int REMOVE_EMPLOYEE = 2;
         final int EDIT_DATA = 3;
         final int PAYMENT_RAPPORT = 4;
+        final int SAVE_EMPLOYEES = 5;
+        final int LOAD_EMPLOYEES = 6;
         final int EXIT_OPTION = 0;
 
         final String info = "Create employee: 1\nRemove employee: 2\nEdit employee data: 3\nPayment rapport: 4\nExit: 0";
@@ -34,6 +36,12 @@ public class Menu {
                     break;
                 case PAYMENT_RAPPORT:
                     Company.getInstance().paymentRapport();
+                    break;
+                case SAVE_EMPLOYEES:
+                    Company.getInstance().saveEmployees();
+                    break;
+                case LOAD_EMPLOYEES:
+                    Company.getInstance().loadEmployees();
                     break;
                 case EXIT_OPTION:
                     exit = true;

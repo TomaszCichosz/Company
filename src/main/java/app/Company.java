@@ -1,5 +1,6 @@
 package app;
 
+import com.google.gson.Gson;
 import model.Employee;
 
 import java.util.ArrayList;
@@ -44,6 +45,17 @@ public class Company {
     }
 
     public void editData(int employeeIndex) {
-        Company.getInstance().employees.get(employeeIndex).editData();
+        employees.get(employeeIndex).editData();
+    }
+
+    public void saveEmployees() {
+        Gson gson = new Gson();
+        for (Employee employee : employees) {
+            InputOutputMethods.stringToFile(gson.toJson(employee), "EmployeeGSONDatabase");
+        }
+    }
+
+    public void loadEmployees() {
+        Gson gson = new Gson();
     }
 }

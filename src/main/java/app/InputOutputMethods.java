@@ -49,7 +49,7 @@ public class InputOutputMethods {
             if (!file.exists()) {
                 file.createNewFile();
             }
-            FileWriter fw = new FileWriter(file);
+            FileWriter fw = new FileWriter(file, true);
             bw = new BufferedWriter(fw);
             bw.write(textToWrite);
             bw.close();
