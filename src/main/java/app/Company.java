@@ -30,7 +30,7 @@ public class Company {
     public void employeeList() {
         int i = 0;
         for (Employee employee : employees) {
-            System.out.println("Employee index: " + i++); //sprawdz czy dziala
+            System.out.println("Employee index: " + i++);
             System.out.println(employee);
         }
     }
@@ -41,5 +41,9 @@ public class Company {
 
     public void addEmployee(Employee employee) {
         employees.add(employee);
+    }
+
+    public void editData(int employeeIndex) {
+        Company.getInstance().employees.get(employeeIndex).editData();
     }
 }

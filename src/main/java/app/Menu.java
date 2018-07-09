@@ -28,7 +28,9 @@ public class Menu {
                     Company.getInstance().removeEmployee(InputOutputMethods.getIntInput());
                     break;
                 case EDIT_DATA:
-
+                    Company.getInstance().employeeList();
+                    System.out.println("Choose employee to edit:");
+                    Company.getInstance().editData(InputOutputMethods.getIntInput());
                     break;
                 case PAYMENT_RAPPORT:
                     Company.getInstance().paymentRapport();

@@ -1,5 +1,7 @@
 package model;
 
+import app.InputOutputMethods;
+
 import java.util.UUID;
 
 public class ContractEmployee extends Employee {
@@ -14,7 +16,15 @@ public class ContractEmployee extends Employee {
     }
 
     public void editData() {
-
+        System.out.println("Name: " + getName());
+        System.out.println("New name:");
+        setName(InputOutputMethods.getStringInput());
+        System.out.println("Surname: " + getSurname());
+        System.out.println("New surname:");
+        setSurname((InputOutputMethods.getStringInput()));
+        System.out.println("Contract cost: " + getContractCost());
+        System.out.println("New contract cost:");
+        setContractCost(InputOutputMethods.getDoubleInput());
     }
 
     public double getContractCost() {

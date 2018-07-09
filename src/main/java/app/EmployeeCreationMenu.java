@@ -14,7 +14,7 @@ public class EmployeeCreationMenu {
         final int CREATE_HOURLY_EMPLOYEE = 3;
         final int EXIT_OPTION = 0;
 
-        final String info = "Build:\n salary employee: 1\ncontract employee: 2\nhourly employee: 3\nExit: 0";
+        final String info = "Build:\nsalary employee: 1\ncontract employee: 2\nhourly employee: 3\nExit: 0";
 
         Strategy strategy;
 
