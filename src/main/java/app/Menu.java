@@ -12,7 +12,7 @@ public class Menu {
         final int LOAD_EMPLOYEES = 6;
         final int EXIT_OPTION = 0;
 
-        final String info = "Create employee: 1\nRemove employee: 2\nEdit employee data: 3\nPayment rapport: 4\nExit: 0";
+        final String info = "Create employee: 1\nRemove employee: 2\nEdit employee data: 3\nPayment rapport: 4\nSave employees: 5\nLoad employees: 6\nExit: 0";
 
         boolean exit = false;
         int decision;

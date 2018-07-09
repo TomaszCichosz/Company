@@ -14,14 +14,12 @@ public class HourlyEmployeeStrategy implements Strategy {
         String name = scanner.nextLine();
         System.out.println("Podaj nazwisko:");
         String surname = scanner.nextLine();
-        System.out.println("Podaj id:");
-        String id = scanner.nextLine();
         System.out.println("Podaj hoursWorked:");
         int hoursWorked = scanner.nextInt();
         System.out.println("Podaj hourlyCost");
         double hourlyCost = scanner.nextDouble();
 
         return new HourlyEmployee.Builder().uuid().name(name).surname(surname)
-                .id(id).hoursWorked(hoursWorked).hourlyCost(hourlyCost).build();
+                .hoursWorked(hoursWorked).hourlyCost(hourlyCost).build();
     }
 }

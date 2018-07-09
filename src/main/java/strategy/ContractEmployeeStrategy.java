@@ -14,12 +14,10 @@ public class ContractEmployeeStrategy implements Strategy {
         String name = scanner.nextLine();
         System.out.println("Podaj nazwisko:");
         String surname = scanner.nextLine();
-        System.out.println("Podaj id:");
-        String id = scanner.nextLine();
         System.out.println("Podaj contractCost");
         double contractCost = scanner.nextInt();
 
         return new ContractEmployee.Builder().uuid().name(name).surname(surname)
-                .id(id).contractCost(contractCost).build();
+                .contractCost(contractCost).build();
     }
 }

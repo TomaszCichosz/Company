@@ -7,7 +7,6 @@ public abstract class Employee {
 
     private String name;
     private String surname;
-    private String id;
     private UUID uuid;
 
     public abstract double calculatePaycheck();
@@ -35,14 +34,6 @@ public abstract class Employee {
 
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public UUID getUuid() {

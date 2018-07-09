@@ -14,12 +14,10 @@ public class SalaryEmployeeStrategy implements Strategy {
         String name = scanner.nextLine();
         System.out.println("Podaj nazwisko:");
         String surname = scanner.nextLine();
-        System.out.println("Podaj id:");
-        String id = scanner.nextLine();
         System.out.println("Podaj salary");
         double salary = scanner.nextInt();
 
         return new SalaryEmployee.Builder().uuid().name(name).surname(surname)
-                .id(id).monthlySalary(salary).build();
+                .monthlySalary(salary).build();
     }
 }

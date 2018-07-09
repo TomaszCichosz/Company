@@ -40,7 +40,6 @@ public class SalaryEmployee extends Employee {
         private double monthlySalary;
         private String name;
         private String surname;
-        private String id;
         private UUID uuid;
 
         public Builder monthlySalary(double monthlySalary) {
@@ -58,11 +57,6 @@ public class SalaryEmployee extends Employee {
             return this;
         }
 
-        public Builder id(String id) {
-            this.id = id;
-            return this;
-        }
-
         public Builder uuid() {
             this.uuid = UUID.randomUUID();
             return this;
@@ -72,7 +66,6 @@ public class SalaryEmployee extends Employee {
             SalaryEmployee salaryEmployee = new SalaryEmployee();
             salaryEmployee.setName(name);
             salaryEmployee.setSurname(surname);
-            salaryEmployee.setId(id);
             salaryEmployee.setUuid(uuid);
             salaryEmployee.setMonthlySalary(monthlySalary);
             return salaryEmployee;

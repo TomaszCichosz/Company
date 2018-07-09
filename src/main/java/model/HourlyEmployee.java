@@ -53,7 +53,6 @@ public class HourlyEmployee extends Employee {
         private double hourlyCost;
         private String name;
         private String surname;
-        private String id;
         private UUID uuid;
 
         public Builder hoursWorked(int hoursWorked) {
@@ -76,11 +75,6 @@ public class HourlyEmployee extends Employee {
             return this;
         }
 
-        public Builder id(String id) {
-            this.id = id;
-            return this;
-        }
-
         public Builder uuid() {
             this.uuid = UUID.randomUUID();
             return this;
@@ -90,7 +84,6 @@ public class HourlyEmployee extends Employee {
             HourlyEmployee hourlyEmployee = new HourlyEmployee();
             hourlyEmployee.setName(name);
             hourlyEmployee.setSurname(surname);
-            hourlyEmployee.setId(id);
             hourlyEmployee.setUuid(uuid);
             hourlyEmployee.setHourlyCost(hourlyCost);
             hourlyEmployee.setHoursWorked(hoursWorked);
