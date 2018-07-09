@@ -9,31 +9,28 @@ public class EmployeeTest {
 
     @Test
     public void givenBuilder_whenConstructingSalaryEmployee_thenSalaryEmployeeConstructedCorrectly() {
-        SalaryEmployee salaryEmployee = new SalaryEmployee.Builder().name("Jan").surname("Kowalski").id("jan_kowalski").monthlySalary(1000d).build();
+        SalaryEmployee salaryEmployee = new SalaryEmployee.Builder().name("Jan").surname("Kowalski").monthlySalary(1000d).build();
 
         assertEquals("Jan", salaryEmployee.getName());
         assertEquals("Kowalski", salaryEmployee.getSurname());
-        assertEquals("jan_kowalski", salaryEmployee.getId());
         assertEquals(1000d, salaryEmployee.getMonthlySalary(), 0.0001d);
     }
 
     @Test
     public void givenBuilder_whenConstructingContractEmployee_thenContractEmployeeConstructedCorrectly() {
-        ContractEmployee contractEmployee = new ContractEmployee.Builder().name("Jan").surname("Kowalski").id("jan_kowalski").contractCost(100d).build();
+        ContractEmployee contractEmployee = new ContractEmployee.Builder().name("Jan").surname("Kowalski").contractCost(100d).build();
 
         assertEquals("Jan", contractEmployee.getName());
         assertEquals("Kowalski", contractEmployee.getSurname());
-        assertEquals("jan_kowalski", contractEmployee.getId());
         assertEquals(100d, contractEmployee.getContractCost(), 0.0001d);
     }
 
     @Test
     public void givenBuilder_whenConstructingHourlyEmployee_thenHourlyEmployeeConstructedCorrectly() {
-        HourlyEmployee hourlyEmployee = new HourlyEmployee.Builder().name("Jan").surname("Kowalski").id("jan_kowalski").hourlyCost(10d).hoursWorked(100).build();
+        HourlyEmployee hourlyEmployee = new HourlyEmployee.Builder().name("Jan").surname("Kowalski").hourlyCost(10d).hoursWorked(100).build();
 
         assertEquals("Jan", hourlyEmployee.getName());
         assertEquals("Kowalski", hourlyEmployee.getSurname());
-        assertEquals("jan_kowalski", hourlyEmployee.getId());
         assertEquals(10d, hourlyEmployee.getHourlyCost(), 0.0001d);
         assertEquals(100, hourlyEmployee.getHoursWorked());
     }
