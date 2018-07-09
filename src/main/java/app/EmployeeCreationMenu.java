@@ -5,16 +5,13 @@ import strategy.HourlyEmployeeStrategy;
 import strategy.SalaryEmployeeStrategy;
 import strategy.Strategy;
 
-import java.util.Scanner;
-
 public class EmployeeCreationMenu {
 
     public static void start() {
 
-        final int CREATE_EMPLOYEE = 1;
-        final int REMOVE_EMPLOYEE = 2;
-        final int EDIT_DATA = 3;
-        final int PAYMENT_RAPPORT = 4;
+        final int CREATE_SALARY_EMPLOYEE = 1;
+        final int CREATE_CONTRACT_EMPLOYEE = 2;
+        final int CREATE_HOURLY_EMPLOYEE = 3;
         final int EXIT_OPTION = 0;
 
         final String info = "Build:\n salary employee: 1\ncontract employee: 2\nhourly employee: 3\nExit: 0";
@@ -28,19 +25,19 @@ public class EmployeeCreationMenu {
             System.out.println(info);
             decision = InputOutputMethods.getIntInput();
             switch (decision) {
-                case 1:
+                case CREATE_SALARY_EMPLOYEE:
                     strategy = new SalaryEmployeeStrategy();
                     Company.getInstance().addEmployee(strategy.buildEmployee());
                     break;
-                case 2:
+                case CREATE_CONTRACT_EMPLOYEE:
                     strategy = new ContractEmployeeStrategy();
                     Company.getInstance().addEmployee(strategy.buildEmployee());
                     break;
-                case 3:
+                case CREATE_HOURLY_EMPLOYEE:
                     strategy = new HourlyEmployeeStrategy();
                     Company.getInstance().addEmployee(strategy.buildEmployee());
                     break;
-                case 0:
+                case EXIT_OPTION:
                     exit = true;
                     break;
                 default:
